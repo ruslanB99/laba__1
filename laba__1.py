@@ -41,16 +41,16 @@ class Circle(Figure):
      Figure.__init__(self)
      self.r = r
 
-    def calcPerimeter(self):
+    def calcPerimeter1(self):
         perimeter = 2 * self.r * math.pi
         return perimeter
 
-    def calcSpace(self):
+    def calcSpace1(self):
         space = math.pi * self.r ** 2
         return space
 
 
-    def figInfo(self):
+    def figInfo1(self):
         p = self.calcPerimeter()
         s = self.calcSpace()
         print('У  круга периметр = %s площадь = %s' % (p,s))
@@ -62,18 +62,21 @@ class Triangle(Figure):
        self.b = b
        self.c = c
        self.k = k
-    def calcPerimeter1(self):
+    def calcPerimeter2(self):
           perimeter = self.a +  self.b +  self.c
           return perimeter
-    def calcSpace1(self):
+    def calcSpace2(self):
          space = 0.5 *  self.a * self.k
          return space
 
-    def figInfo1(self):
+    def figInfo2(self):
          p = self.calcPerimeter()
          s = self.calcSpace()
          print('У  треугольника периметр = %s площадь = %s' % (p, s))
 if __name__ == "__main__":
+    print(Rectangle.calcPerimeter)
+    print(Circle.calcPerimeter1)
+    print(Triangle.calcPerimeter2)
      doctest.testmod()
     # TODO работоспособность экземпляров класса проверить с помощью doctest
 
